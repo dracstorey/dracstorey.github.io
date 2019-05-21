@@ -14,7 +14,7 @@ import routes from './routes.js';
 var app = new Framework7({
   root: '#app', // App root element
 
-  name: 'My App', // App name
+  name: 'Storey App', // App name
   theme: 'auto', // Automatic theme detection
   // App root data
   data: function () {

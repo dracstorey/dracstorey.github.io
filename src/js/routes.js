@@ -46,13 +46,13 @@ var routes = [
       setTimeout(function () {
         // We got user data from request
         var user = {
-          firstName: 'Andrew',
-          lastName: 'Storey',
-          about: 'Director of IT at Dulwioch College',
+          firstName: 'Vladimir',
+          lastName: 'Kharlampidi',
+          about: 'Hello, i am creator of Framework7! Hope you like it!',
           links: [
             {
-              title: 'Dulwich College Website',
-              url: 'http://www.dulwich.org.uk',
+              title: 'Framework7 Website',
+              url: 'http://framework7.io',
             },
             {
               title: 'Framework7 Forum',

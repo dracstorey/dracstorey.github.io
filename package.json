@@ -1,8 +1,8 @@
 {
-  "name": "my-app",
+  "name": "storey-app",
   "private": true,
   "version": "1.0.0",
-  "description": "My App",
+  "description": "Storey App",
   "repository": "",
   "license": "UNLICENSED",
   "framework7": {
@@ -10,7 +10,7 @@
     "type": [
       "web"
     ],
-    "name": "My App",
+    "name": "Storey App",
     "framework": "core",
     "template": "single-view",
     "bundler": "webpack",

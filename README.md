@@ -1,4 +1,4 @@
-# My App
+# Storey App
 
 ## Framework7 CLI Options
 
@@ -10,7 +10,7 @@ Framework7 app created with following options:
   "type": [
     "web"
   ],
-  "name": "My App",
+  "name": "Storey App",
   "framework": "core",
   "template": "single-view",
   "bundler": "webpack",
