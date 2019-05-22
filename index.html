@@ -1,53 +1,44 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
 <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
 <script src="https://unpkg.com/onsenui/js/onsenui.min.js">
-
 </script>
 <script>
-function logit () {
-  const username = document.querySelector('#username').value;
-  const password = document.querySelector('#password').value;
-
-  if (username === 'user' && password === 'pass') {
-    // call the navigator to move to the new page
-    const navigator = document.querySelector('#navigator');
-    navigator.resetToPage('home.html');
-  } else {
-    ons.notification.alert('Wrong username/password combination');
-  }
-
-}
+const loadPage = (page) => {
+  document.querySelector('#menu').close();
+  document.querySelector('#navigator').bringPageTop(page, { animation: 'fade' });
+};
 </script>
 
 </head>
 <body>
-<ons-navigator id="navigator">
-<ons-page>
-  <div style="text-align: center; margin-top: 200px">
-  <p>
-    <ons-input id="username" placeholder="Username" modifier="underbar"></ons-input>
-  </p>
+<ons-splitter>
+  <!-- The side menu -->
+<ons-splitter-side id="menu" collapse>
+  <ons-page>
+    <ons-list>
+      <ons-list-item onclick="loadPage('about.html')">
+        About
+      </ons-list-item>
+        <ons-list-item onclick="loadPage('shackleton.html')">
+        Shackleton
+      </ons-list-item>
+    </ons-list>
+  </ons-page>
+</ons-splitter-side>
 
-  <p>
-    <ons-input
-      id="password"
-      placeholder="Password"
-      type="password"
-      modifier="underbar"
-    >
-    </ons-input>
-  </p>
-
-  <p>
-    <ons-button onClick="logit()">Sign in</ons-button>
-  </p>
-  </div>
-
-</ons-page>
-</ons-navigator>
-
+  <!-- Everything not in the side menu -->
+  <ons-splitter-content>
+    <ons-navigator id="navigator" page="login.html"></ons-navigator>
+  </ons-splitter-content>
+</ons-splitter>
 </body>
 </html>
