@@ -1,0 +1,36 @@
+<ons-page id="login">
+<script>
+const logit = () => {
+  const username = document.querySelector('#username').value;
+  const password = document.querySelector('#password').value;
+
+  if (username === 'user' && password === 'pass') {
+    // call the navigator to move to the new page
+    const navigator = document.querySelector('#navigator');
+    navigator.resetToPage('home.html');
+  } else {
+    ons.notification.alert('Wrong username/password combination');
+  }
+}
+</script>
+
+ <div style="text-align: center; margin-top: 200px">
+  <p>
+    <ons-input id="username" placeholder="Username" modifier="underbar"></ons-input>
+  </p>
+
+  <p>
+    <ons-input
+      id="password"
+      placeholder="Password"
+      type="password"
+      modifier="underbar"
+    >
+    </ons-input>
+  </p>
+
+  <p>
+    <ons-button onclick="logit()">Sign in</ons-button>
+  </p>
+  </div>
+</ons-page>
